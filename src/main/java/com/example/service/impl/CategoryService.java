@@ -12,10 +12,14 @@ import com.example.service.ICategoryService;
 
 public class CategoryService implements ICategoryService{
 	@Autowired
-	private CategoryRepository category;
+	private CategoryRepository categoryRepository;
 	@Override
 	public List<Category> getAllCategory() {
-		return category.findAll();
+		return categoryRepository.findAll();
+	}
+	@Override
+	public void saveCategory(Category category) {
+		categoryRepository.save(category);		
 	}
 
 }

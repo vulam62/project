@@ -6,4 +6,5 @@ import com.example.entities.Category;
 
 public interface ICategoryService {
 	List<Category> getAllCategory();
+	void saveCategory(Category category);
 }
