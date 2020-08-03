@@ -68,12 +68,16 @@
 					<td>
 						<div class="hidden-sm hidden-xs btn-group">
 
-							<button class="btn btn-xs btn-info">
-								<i class="ace-icon fa fa-pencil bigger-120"></i>
-							</button>
-							<button class="btn btn-xs btn-danger">
-								<i class="ace-icon fa fa-trash-o bigger-120"></i>
-							</button>
+							<a th:href=@{/updateCategory/{id}(id=${category.id})} class="btn btn-xs btn-info">
+								<i class="ace-icon fa fa-pencil bigger-120">
+										
+								</i>
+							</a>
+							<a  th:href=@{/deleteCategory/{id}(id=${category.id})} class="btn btn-xs btn-danger">
+								<i class="ace-icon fa fa-trash-o bigger-120">
+									
+								</i>
+							</a>
 						</div>
 						<div class="hidden-md hidden-lg">
 							<div class="inline pos-rel">
@@ -90,7 +94,7 @@
 										</span>
 									</a></li>
 
-									<li><a href="#" class="tooltip-success" data-rel="tooltip"
+									<li><a  class="tooltip-success" data-rel="tooltip"
 										title="Edit"> <span class="green"> <i
 												class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 										</span>

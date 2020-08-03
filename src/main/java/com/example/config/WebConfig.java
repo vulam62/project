@@ -10,10 +10,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 
-/**
- * @author Ramesh Fadatare
- *
- */
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer
 {   
@@ -30,6 +27,7 @@ public class WebConfig implements WebMvcConfigurer
         registry.addViewController("/admin/home").setViewName("homeAdmin");
         registry.addViewController("/admin/list").setViewName("listMovie");
         registry.addViewController("/admin/edit").setViewName("editMovie");
+        registry.addViewController("/admin/updateCategory").setViewName("updateCategory");
         //registry.addViewController("/403").setViewName("403");   
 	}
 	

@@ -1,12 +1,10 @@
 package com.example.security;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,10 +17,7 @@ import com.example.entities.Role;
 import com.example.entities.User;
 import com.example.repositories.UserRepository;
 
-/**
- * @author Ramesh Fadatare
- *
- */
+
 @Service
 @Transactional
 public class CustomUserDetailsService implements UserDetailsService {

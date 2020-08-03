@@ -11,10 +11,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import com.example.entities.Role;
 import com.example.entities.User;
 
-/**
- * @author Ramesh Fadatare
- *
- */
+
 public class AuthenticatedUser extends org.springframework.security.core.userdetails.User
 {
 

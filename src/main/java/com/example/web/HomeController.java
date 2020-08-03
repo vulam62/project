@@ -9,10 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.entities.Message;
 import com.example.repositories.MessageRepository;
 
-/**
- * @author Ramesh Fadatare
- *
- */
+
 @Controller
 public class HomeController
 {

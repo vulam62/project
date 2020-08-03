@@ -7,10 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * @author Ramesh Fadatare
- *
- */
 @Entity
 @Table(name = "messages")
 public class Message {
