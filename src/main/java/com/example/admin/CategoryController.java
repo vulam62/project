@@ -19,14 +19,14 @@ public class CategoryController {
 	public String viewHomePage(Model model)
 	{
 		model.addAttribute("listCategory",categoryService.getAllCategory());
-		return "listMovie";
+		return "category/listMovie";
 	}
 	@GetMapping("/admin/edit")
 	public String showNewCategory(Model model)
 	{
 		Category category = new Category();
 		model.addAttribute("category",category);
-		return "editMovie";
+		return "category/editMovie";
 	}
 	@PostMapping("/saveCategory")
 	public String saveCategory(@ModelAttribute("category") Category category)
@@ -39,7 +39,7 @@ public class CategoryController {
 	{
 		Category category =categoryService.getCategoryById(id);
 		model.addAttribute("category",category);
-		return "updateCategory";
+		return "category/updateCategory";
 	}
 	@GetMapping("/deleteCategory/{id}")
 	public String deleteCategory(@PathVariable(value="id") long id )
