@@ -21,31 +21,50 @@
 		<div class="page-content">
 			<div class="row">
 				<div class="col-xs-12">
-					<form th:action="@{/saveCategory}" th:object="${category}" method="POST" class="form-horizontal" id="formSubmit">
+					<form  method="POST" class="form-horizontal" id="formSubmit">
 
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label no-padding-right"
-								for="form-field-1"> Code </label>
+								for="form-field-1"> Content </label>
 
 							<div class="col-sm-9">
-								<input type="text" class="col-xs-10 col-sm-5" id="code" th:field="*{code}"
-									name="code" />
+								
+									<textarea rows="5" cols="10" class="form-control" ></textarea>
 							</div>
+							
 						</div>
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label no-padding-right" 
-								for="form-field-1"> Name </label>
+								for="form-field-1"> Title </label>
 
 							<div class="col-sm-9">
-								<input type="text" class="col-xs-10 col-sm-5" id="code " th:field="*{name}"
+								<input type="text" class="col-xs-10 col-sm-5" id="code " 
 									name="code" />
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right"
+								for="form-field-1"> ShortDescription </label>
 
+							<div class="col-sm-9">
+								
+									<textarea rows="5" cols="10" class="form-control" ></textarea>
+							</div>
+							
+						</div>
 
+						<div class="form-group">
+							<label class="col-sm-3 control-label no-padding-right" 
+								for="form-field-1"> Category </label>
 
+							<div class="col-sm-9">
+								<input type="text" class="col-xs-10 col-sm-5" id="code "
+									name="code" />
+							</div>
+						</div>
 						<div class="clearfix form-actions">
 							<div class="col-md-offset-3 col-md-9">
 

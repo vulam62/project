@@ -10,8 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -35,13 +34,19 @@ public class Movie {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	@ManyToMany(cascade=CascadeType.MERGE)
-	@JoinTable(
-	      name="movie_category",
-	      joinColumns={@JoinColumn(name="MOVIE_ID", referencedColumnName="ID")},
-	      inverseJoinColumns={@JoinColumn(name="CATEGORY_ID", referencedColumnName="ID")})
-	private List<Category> categories;
+	@ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 	
+	
+
+	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 	@OneToMany(
 	        cascade = CascadeType.ALL,
 	        orphanRemoval = true
@@ -78,11 +83,5 @@ public class Movie {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public List<Category> getCategories() {
-		return categories;
-	}
-	public void setCategories(List<Category> categories) {
-		this.categories = categories;
-	}
-	
+
 }

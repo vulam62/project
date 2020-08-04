@@ -6,4 +6,6 @@ import com.example.entities.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Long>{
 
+	Movie findOneById(Long id);
+
 }

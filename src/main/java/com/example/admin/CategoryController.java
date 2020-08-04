@@ -39,7 +39,7 @@ public class CategoryController {
 	{
 		Category category =categoryService.getCategoryById(id);
 		model.addAttribute("category",category);
-		return "category/updateCategory";
+		return "Category/updateCategory";
 	}
 	@GetMapping("/deleteCategory/{id}")
 	public String deleteCategory(@PathVariable(value="id") long id )

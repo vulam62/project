@@ -1,13 +1,14 @@
 package com.example.dto;
 
 public class CategoryDTO {
-	private int id;
+	private Long id;
 	private String code;
 	private String name;
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getCode() {
